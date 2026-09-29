@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-void: #09090b;
+  --color-panel: #101013;
+  --color-edge: #27272a;
+  --color-neon: #22c55e;
+  --color-neon-dim: #4ade80;
+  --font-mono: ui-monospace, "JetBrains Mono", Menlo, monospace;
+}
+
+html { scroll-behavior: smooth; }
+body { background: #09090b; color: #f4f4f5; -webkit-font-smoothing: antialiased; }
+
+::selection { background: #22c55e; color: #000; }
+
+/* visible keyboard focus everywhere */
+:focus-visible { outline: 2px solid #4ade80; outline-offset: 2px; border-radius: 4px; }
+
+/* terminal */
+.term-out { scrollbar-width: thin; scrollbar-color: #27272a transparent; }
+.term-out::-webkit-scrollbar { width: 8px; }
+.term-out::-webkit-scrollbar-thumb { background: #27272a; border-radius: 4px; }
+
+/* lesson markdown */
+.lesson-md h2 { font-size: 1.35rem; font-weight: 700; margin: 1.4em 0 .6em; color: #fff; }
+.lesson-md h3 { font-size: 1.1rem; font-weight: 600; margin: 1.2em 0 .5em; color: #e4e4e7; }
+.lesson-md p { margin: .7em 0; line-height: 1.75; color: #d4d4d8; }
+.lesson-md ul, .lesson-md ol { margin: .7em 0 .7em 1.4em; color: #d4d4d8; line-height: 1.7; }
+.lesson-md li { margin: .3em 0; }
+.lesson-md blockquote { border-left: 3px solid #22c55e; padding: .4em 1em; margin: 1em 0; background: rgba(34,197,94,.06); border-radius: 0 .5em .5em 0; color: #e4e4e7; }
+.lesson-md code { font-family: var(--font-mono); background: #1c1c1f; padding: .15em .4em; border-radius: .3em; font-size: .88em; color: #4ade80; }
+.lesson-md pre { background: #000; border: 1px solid #27272a; border-radius: .75em; padding: 1em; overflow-x: auto; margin: 1em 0; }
+.lesson-md pre code { background: none; padding: 0; color: #e4e4e7; }
+.lesson-md table { width: 100%; border-collapse: collapse; margin: 1em 0; font-size: .92em; }
+.lesson-md th, .lesson-md td { border: 1px solid #27272a; padding: .55em .8em; text-align: left; }
+.lesson-md th { background: #141417; color: #fff; }
+.lesson-md td { color: #d4d4d8; }
+.lesson-md strong { color: #fff; }
+.lesson-md a { color: #4ade80; text-decoration: underline; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  html { scroll-behavior: auto; }
+}
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff; }
+}
