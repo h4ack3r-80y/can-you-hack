@@ -212,10 +212,10 @@ export default async function Home() {
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-[340px_1fr] gap-10 md:gap-14 items-center">
           <Reveal>
             <div className="relative mx-auto w-72 md:w-full max-w-[340px]">
-              <div className="absolute -inset-3 rounded-[2rem] opacity-60 blur-2xl anim-gradient"
+              <div className="absolute -inset-3 rounded-[2rem] opacity-60 blur-2xl"
                 style={{ background: "linear-gradient(135deg, var(--accent), #0ea5e9, var(--accent))" }} aria-hidden />
               <Image src={site.founderPhoto} alt={`${site.founder}, founder of ${site.company}`}
-                width={680} height={680}
+                width={680} height={680} sizes="(max-width: 768px) 288px, 340px"
                 className="relative rounded-[2rem] object-cover aspect-square border border-edge anim-float" />
               <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 whitespace-nowrap card px-5 py-2.5 flex items-center gap-2">
                 <IconCrown size={18} className="text-neon" />

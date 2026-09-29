@@ -18,7 +18,7 @@ export default function Avatar({ userId, name, size = 28, ext = "", className = 
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img src={`/avatars/${userId}.${ext || "png"}`} alt={`${name}'s avatar`} width={size} height={size}
-      style={style} onError={() => setFailed(true)}
+      style={style} onError={() => setFailed(true)} loading="lazy" decoding="async"
       className={`rounded-full object-cover border border-edge bg-panel-2 ${className}`} />
   );
 }

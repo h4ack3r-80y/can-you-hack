@@ -1,10 +1,18 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { IconMenu, IconX, IconTerminal, IconCrown, IconShield, IconChart, IconUser } from "./icons";
 
 export default function MobileNav({ user }: { user: { name: string; isAdmin: boolean } | null }) {
   const [open, setOpen] = useState(false);
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setOpen(false); };
+    const onResize = () => { if (window.innerWidth >= 1024) setOpen(false); };
+    window.addEventListener("keydown", onKey);
+    window.addEventListener("resize", onResize);
+    return () => { window.removeEventListener("keydown", onKey); window.removeEventListener("resize", onResize); };
+  }, [open ]);
   const links = [
     { href: "/paths", label: "Learning paths", icon: IconTerminal },
     { href: "/leaderboard", label: "Rankings", icon: IconCrown },

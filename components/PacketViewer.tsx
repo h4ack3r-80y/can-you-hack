@@ -26,7 +26,7 @@ export default function PacketViewer({ captureId }: { captureId: string }) {
   if (!cap) return <p className="text-red-400">Unknown capture: {captureId}</p>;
 
   return (
-    <div className="border border-edge rounded-xl overflow-hidden bg-black/60">
+    <div className="term-dark border border-edge rounded-xl overflow-hidden bg-black/60">
       <div className="p-4 border-b border-edge">
         <h3 className="font-bold">{cap.name}</h3>
         <p className="text-sm text-zinc-400 mt-1">{cap.desc}</p>

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const PROTECTED = ["/dashboard", "/paths", "/learn", "/lab", "/certificates", "/profile", "/admin", "/report"];
+const PROTECTED = ["/dashboard", "/paths", "/learn", "/lab", "/certificates", "/profile", "/admin", "/report", "/leaderboard"];
 const AUTH_PAGES = ["/login", "/signup"];
 
 export default function proxy(req: NextRequest) {
@@ -24,5 +24,5 @@ export default function proxy(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/dashboard/:path*", "/paths/:path*", "/learn/:path*", "/lab/:path*", "/certificates/:path*", "/profile/:path*", "/admin/:path*", "/report/:path*", "/login", "/signup"],
+  matcher: ["/dashboard/:path*", "/paths/:path*", "/learn/:path*", "/lab/:path*", "/certificates/:path*", "/profile/:path*", "/admin/:path*", "/report/:path*", "/leaderboard", "/login", "/signup"],
 };
