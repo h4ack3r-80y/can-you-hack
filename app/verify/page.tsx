@@ -17,7 +17,7 @@ export default function VerifyPage() {
         <input
           value={code}
           onChange={(e) => setCode(e.target.value)}
-          placeholder="CYH-2026-XXXXXX"
+          placeholder="CYH-2026-XXXXXXXXXXXXXXX"
           className="bg-panel border border-edge rounded-lg px-4 py-3.5 font-mono text-center tracking-widest outline-none focus:border-neon text-[16px]"
           aria-label="Certificate verification code"
         />

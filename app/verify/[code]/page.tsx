@@ -52,7 +52,7 @@ export default async function VerifyCodePage({ params }: { params: Promise<{ cod
             ✗ NOT FOUND
           </p>
           <h1 className="text-2xl font-bold mt-6">No certificate with this code</h1>
-          <p className="text-zinc-400 mt-2 text-sm">Check the code and try again — it looks like <code className="font-mono">CYH-2026-XXXXXX</code>.</p>
+          <p className="text-zinc-400 mt-2 text-sm">Check the code and try again — it looks like <code className="font-mono">CYH-2026-XXXXXXXXXXXXXXX</code>.</p>
         </div>
       )}
       <Link href="/verify" className="inline-block mt-8 text-neon-dim hover:text-neon underline underline-offset-4 text-sm">Verify another code</Link>

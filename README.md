@@ -20,7 +20,7 @@ Open http://localhost:3000. Sign up — the email in `ADMIN_EMAIL` (`.env`) beco
 - **6 learning paths** — Beginner/Intermediate × Pentesting, Forensics, Network Analysis
 - **Simulated Kali terminal** in the browser (`lib/sim/`): Nmap, netcat, telnet, forensics tools (`strings`, `exiftool`, `carve`), packet analysis (`tshark`) — all against fictional targets. Zero backend calls during labs.
 - **No skipping**: modules unlock in order — lesson → hands-on lab → 80% quiz.
-- **Certificates**: unique verifiable codes (`CYH-2026-XXXXXX`), QR codes, public `/verify/[code]` page, LinkedIn "Add to profile" support.
+- **Certificates**: unique verifiable codes (`CYH-2026-XXXXXXXXXXXXXXX`), QR codes, public `/verify/[code]` page, LinkedIn "Add to profile" support.
 - **Strong passwords enforced**: 12+ chars, strength meter, common-password blocklist, bcrypt-12 hashing.
 
 ## Editing content (founder)
