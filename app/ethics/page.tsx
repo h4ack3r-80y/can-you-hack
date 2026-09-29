@@ -11,7 +11,7 @@ export default function EthicsPage() {
           Only test systems you own or have <strong>written permission</strong> to test.
         </blockquote>
         <p>
-          Everything you learn on "Can you Hack?" — reconnaissance, exploitation, forensics,
+          Everything you learn on &quot;Can you Hack?&quot; — reconnaissance, exploitation, forensics,
           traffic analysis — is taught in a <strong>simulated lab</strong>. The techniques are
           real. The targets are fictional. Using these techniques against real systems without
           authorization is a crime — in Pakistan under the Prevention of Electronic Crimes Act
@@ -20,22 +20,22 @@ export default function EthicsPage() {
         <h2>What ethical hackers do</h2>
         <ul>
           <li>Get <strong>written authorization</strong> defining exactly what may be tested — before touching anything.</li>
-          <li>Respect the <strong>scope</strong>: if it's not in the contract, it's off limits.</li>
+          <li>Respect the <strong>scope</strong>: if it&apos;s not in the contract, it&apos;s off limits.</li>
           <li><strong>Document everything</strong> — your notes become the report the client pays for.</li>
           <li><strong>Disclose responsibly</strong>: report vulnerabilities to the owner, never exploit them for gain or bragging rights.</li>
-          <li>Protect <strong>client data</strong> as carefully as the client's systems.</li>
+          <li>Protect <strong>client data</strong> as carefully as the client&apos;s systems.</li>
         </ul>
         <h2>Why this matters for your career</h2>
         <p>
-          Employers don't just hire skill — they hire <strong>trust</strong>. A track record of
+          Employers don&apos;t just hire skill — they hire <strong>trust</strong>. A track record of
           ethical, authorized work (labs like this one, CTFs, bug bounties with permission) is
-          what turns a student into a professional. One unauthorized "test" can end a career
+          what turns a student into a professional. One unauthorized &quot;test&quot; can end a career
           before it starts.
         </p>
         <h2>Your pledge</h2>
         <p>
           By creating an account, you pledged to use these skills only on systems you own or
-          have written permission to test. Hold that line — it's what separates hackers from
+          have written permission to test. Hold that line — it&apos;s what separates hackers from
           criminals.
         </p>
       </div>

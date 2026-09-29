@@ -1,4 +1,5 @@
 import { Path } from "../types";
+import { beginnerForensicsRoom } from "./rooms/beginner-forensics-room";
 
 export const beginnerForensics: Path = {
   id: "beginner-forensics",
@@ -214,6 +215,7 @@ That \`/..\` pattern is the attacker's fingerprint. Your job: name the IP, name 
         { q: "The attacker's IP was…", options: ["192.168.56.50", "203.0.113.77", "8.8.8.8", "127.0.0.1"], answer: 1, explain: "203.0.113.77 made all the hostile requests." },
       ],
     },
+    beginnerForensicsRoom,
     {
       id: "case-file",
       title: "Case File",

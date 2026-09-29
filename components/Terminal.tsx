@@ -38,6 +38,8 @@ export default function Terminal({ onFlags, initialLines, compact }: TerminalPro
   };
 
   useEffect(() => {
+    // Sync from the simulator engine (external system) on mount.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setPrompt(engine.prompt());
     (initialLines ?? [
       "Can you Hack? virtual lab — type 'help' to see your tools.",

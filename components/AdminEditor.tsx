@@ -22,6 +22,8 @@ export default function AdminEditor({ paths }: { paths: PathMeta[] }) {
     setValue(field === "lesson" ? m.lesson : JSON.stringify(field === "quiz" ? m.quiz : { labIntro: m.labIntro, objectives: m.objectives }, null, 2));
   };
 
+  // Sync editor state from the fetched module (external system).
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => { load(); /* eslint-disable-next-line react-hooks/exhaustive-deps */ }, [pathId, moduleId, field]);
 
   const save = async () => {

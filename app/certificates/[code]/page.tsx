@@ -54,7 +54,7 @@ export default async function CertificateViewPage({ params }: { params: Promise<
       </div>
 
       <p className="no-print text-center text-xs text-zinc-600 font-mono mt-4">
-        Tip: use your browser's Print → "Save as PDF" for a digital copy.
+        Tip: use your browser&apos;s Print → &quot;Save as PDF&quot; for a digital copy.
       </p>
     </main>
   );

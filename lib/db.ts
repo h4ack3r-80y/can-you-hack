@@ -70,6 +70,8 @@ CREATE TABLE IF NOT EXISTS notes (
 );
 `);
 
+try { sqlite.exec(`ALTER TABLE users ADD COLUMN avatar TEXT NOT NULL DEFAULT ''`); } catch { /* column exists */ }
+
 const now = () => new Date().toISOString();
 const B = (v: unknown) => (v ? 1 : 0);
 
@@ -84,6 +86,7 @@ function mapUser(r: Row) {
     email: r.email as string,
     passwordHash: r.passwordHash as string,
     isAdmin: (r.isAdmin as number) === 1,
+    avatar: (r.avatar as string) ?? "",
     pledgeAcceptedAt: new Date(r.pledgeAcceptedAt as string),
     createdAt: new Date(r.createdAt as string),
   };
@@ -148,11 +151,12 @@ const user = {
       .run(id, data.name, data.email, data.passwordHash, B(data.isAdmin), t, t);
     return mapUser(sqlite.prepare("SELECT * FROM users WHERE id = ?").get(id) as Row);
   },
-  async update({ where, data }: { where: { id: string }; data: { passwordHash?: string; name?: string } }) {
+  async update({ where, data }: { where: { id: string }; data: { passwordHash?: string; name?: string; avatar?: string } }) {
     const sets: string[] = [];
     const vals: PV[] = [];
     if (data.passwordHash !== undefined) { sets.push("passwordHash = ?"); vals.push(data.passwordHash); }
     if (data.name !== undefined) { sets.push("name = ?"); vals.push(data.name); }
+    if (data.avatar !== undefined) { sets.push("avatar = ?"); vals.push(data.avatar); }
     if (sets.length) sqlite.prepare(`UPDATE users SET ${sets.join(", ")} WHERE id = ?`).run(...vals, where.id);
     return this.findUnique({ where });
   },

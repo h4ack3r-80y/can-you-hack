@@ -8,6 +8,8 @@ export interface SessionUser {
   name: string;
   email: string;
   isAdmin: boolean;
+  avatar: string;
+  createdAt: Date;
 }
 
 export async function getSessionUser(): Promise<SessionUser | null> {
@@ -27,6 +29,8 @@ export async function getSessionUser(): Promise<SessionUser | null> {
     name: session.user.name,
     email: session.user.email,
     isAdmin: session.user.isAdmin,
+    avatar: session.user.avatar || "",
+    createdAt: session.user.createdAt,
   };
 }
 

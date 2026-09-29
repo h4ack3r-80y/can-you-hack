@@ -1,4 +1,5 @@
 import { Path } from "../types";
+import { intermediateNetworkRoom } from "./rooms/intermediate-network-room";
 
 export const intermediateNetwork: Path = {
   id: "intermediate-network",
@@ -209,6 +210,7 @@ Write it as a hunter would: *"Hypothesis: 192.168.56.40 is exfiltrating via DNS 
         { q: "The hunter's verdict format is…", options: ["A guess", "Hypothesis → evidence → verdict", "Blame first", "Silence"], answer: 1, explain: "Structured reasoning others can verify." },
       ],
     },
+    intermediateNetworkRoom,
     {
       id: "soc-shift",
       title: "SOC Shift — Triage Simulation",

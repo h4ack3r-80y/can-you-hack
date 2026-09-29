@@ -12,7 +12,7 @@ export default function VerifyPage() {
     <main className="max-w-md mx-auto px-4 py-16 text-center">
       <p className="font-mono text-sm text-neon-dim mb-3">🔍 CERTIFICATE VERIFICATION</p>
       <h1 className="text-3xl font-bold mb-3">Is this certificate real?</h1>
-      <p className="text-zinc-400 mb-8 text-sm">Enter the verification code printed on any "Can you Hack?" certificate.</p>
+      <p className="text-zinc-400 mb-8 text-sm">Enter the verification code printed on any &quot;Can you Hack?&quot; certificate.</p>
       <form onSubmit={submit} className="flex flex-col gap-3">
         <input
           value={code}

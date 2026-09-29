@@ -1,4 +1,5 @@
 import { Path } from "../types";
+import { beginnerNetworkRoom } from "./rooms/beginner-network-room";
 
 export const beginnerNetwork: Path = {
   id: "beginner-network",
@@ -209,6 +210,7 @@ Answer the objectives from the capture. No guessing — cite packet numbers in y
         { q: "The SNI value was…", options: ["google.com", "example.com", "hidden", "an IP"], answer: 1, explain: "SNI=example.com leaked in the Client Hello." },
       ],
     },
+    beginnerNetworkRoom,
     {
       id: "incident-signs",
       title: "Incident Signs",

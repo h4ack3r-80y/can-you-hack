@@ -45,3 +45,6 @@ next-env.d.ts
 *.db-journal
 # secrets
 .env
+
+# user avatar uploads — never commit
+public/avatars/

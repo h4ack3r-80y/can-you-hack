@@ -15,9 +15,14 @@ export const metadata: Metadata = {
   },
 };
 
+const themeInit = `(function(){try{var t=localStorage.getItem('cyh-theme');document.documentElement.dataset.theme=t==='light'?'light':'dark';}catch(e){document.documentElement.dataset.theme='dark';}})();`;
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="dark" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInit }} />
+      </head>
       <body className="min-h-screen flex flex-col">
         <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:bg-neon focus:text-black focus:px-3 focus:py-2 focus:rounded z-50">
           Skip to content

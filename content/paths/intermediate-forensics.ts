@@ -1,4 +1,5 @@
 import { Path } from "../types";
+import { intermediateForensicsRoom } from "./rooms/intermediate-forensics-room";
 
 export const intermediateForensics: Path = {
   id: "intermediate-forensics",
@@ -210,6 +211,7 @@ Re-open \`evidence/access.log\`. Imagine the attacker deleted their four hostile
         { q: "One wiped log vs five agreeing sources:", options: ["Trust the wiped one", "Corroboration across sources beats any single tampered source", "Give up", "They're equal"], answer: 1, explain: "Faking everything consistently is nearly impossible." },
       ],
     },
+    intermediateForensicsRoom,
     {
       id: "full-case",
       title: "Full Case — End to End",
