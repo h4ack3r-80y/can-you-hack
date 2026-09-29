@@ -47,7 +47,7 @@ export default async function LeaderboardPage() {
                                : { background: "var(--panel-2)", color: "var(--muted)", border: "1px solid var(--edge)" }}>
                     {i < 3 ? <IconMedal size={20} /> : u.rank}
                   </span>
-                  <Avatar userId={u.id} name={u.name} size={44} />
+                  <Avatar userId={u.id} name={u.name} size={44} ext={u.avatar || ""} />
                   <div className="flex-1 min-w-0">
                     <p className="font-bold truncate">{u.name} {isMe && <span className="chip ml-1 !text-[10px]">you</span>}</p>
                     <p className="font-mono text-xs text-zinc-500">{u.modulesDone} modules · {u.certificates} certificates</p>

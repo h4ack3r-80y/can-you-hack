@@ -1,11 +1,12 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import { Suspense } from "react";
 
 function LoginForm() {
   const params = useSearchParams();
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -22,7 +23,7 @@ function LoginForm() {
       });
       const data = await res.json();
       if (!res.ok) setError(data.error || "Login failed.");
-      else window.location.href = params.get("next") || "/dashboard";
+      else router.push(params.get("next") || "/dashboard");
     } catch {
       setError("Network error. Try again.");
     } finally {

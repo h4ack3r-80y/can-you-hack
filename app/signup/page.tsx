@@ -1,9 +1,11 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import PasswordStrength from "@/components/PasswordStrength";
 
 export default function SignupPage() {
+  const router = useRouter();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -30,7 +32,7 @@ export default function SignupPage() {
         setError(data.error || "Signup failed.");
         setIssues(data.issues || []);
       } else {
-        window.location.href = "/dashboard";
+        router.push("/dashboard");
       }
     } catch {
       setError("Network error. Try again.");

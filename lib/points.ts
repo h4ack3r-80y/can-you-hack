@@ -35,6 +35,7 @@ export async function getScore(userId: string): Promise<ScoreBreakdown> {
 export interface RankedUser {
   id: string;
   name: string;
+  avatar: string;
   points: number;
   modulesDone: number;
   certificates: number;
@@ -77,7 +78,7 @@ export async function getLeaderboard(limit = 25): Promise<RankedUser[]> {
   for (let i = 0; i < ranked.length; i++) {
     const u = await db.user.findUnique({ where: { id: ranked[i].id } });
     if (!u) continue;
-    result.push({ id: u.id, name: u.name, points: ranked[i].points, modulesDone: ranked[i].modulesDone, certificates: ranked[i].certificates, rank: i + 1 });
+    result.push({ id: u.id, name: u.name, avatar: u.avatar ?? "", points: ranked[i].points, modulesDone: ranked[i].modulesDone, certificates: ranked[i].certificates, rank: i + 1 });
   }
   return result;
 }

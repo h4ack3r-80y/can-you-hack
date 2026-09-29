@@ -39,7 +39,7 @@ export default async function Dashboard() {
       {/* header */}
       <Reveal>
         <div className="flex flex-wrap items-center gap-5 mb-8">
-          <Avatar userId={user.id} name={user.name} size={64} />
+          <Avatar userId={user.id} name={user.name} size={64} ext={user.avatar || ""} />
           <div className="flex-1 min-w-[220px]">
             <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">Welcome back, {firstName}</h1>
             <p className="text-zinc-500 mt-1">Your mission control — track every hack, flag, and certificate.</p>
